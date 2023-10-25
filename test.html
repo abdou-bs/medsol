@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="12-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cmnd.css">
+    <title>MEDSOL - la solution est entre vos mains</title>
+  <script>
+    function validateForm() {
+      // Vérification du numéro de téléphone
+      var phoneRegex = /^(05|06|07)[0-9]{8}$/;
+      var phoneNumber = document.getElementById("phone").value;
+      if (!phoneRegex.test(phoneNumber)) {
+        alert("Veuillez entrer un numéro de téléphone valide (commençant par 05, 06 ou 07).");
+        return false;
+      }
+     
+      // Vérification de l'adresse e-mail
+     
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,4}$/;
+      var email = document.getElementById("email").value;
+       if(email=== ""){
+        alert('email ne peux pas etre vide');
+        return false;
+     }
+      if (emailRegex.test(email)) {
+        alert("Veuillez entrer une adresse e-mail valide.");
+        return false;
+      }
+
+      // Vérification de l'adresse
+      var address = document.getElementById("address").value;
+      if (address.trim() === "") {
+        alert("Veuillez entrer une adresse.");
+        return false;
+      }
+
+      // Vérification de la liste déroulante
+      var dropdown = document.getElementById("dropdown").value;
+      if (dropdown === "") {
+        alert("Veuillez sélectionner une option dans la liste déroulante.");
+        return false;
+      }
+
+      // Si toutes les vérifications sont réussies
+      alert("Formulaire soumis avec succès!. votre commande elle prise en charge notre stafe vous s'aplera dans un instant" );
+      return true;
+    }
+  </script>
+</head>
+<body>
+    <header class="header" >
+        <a href="MEDSOL.html#home" class="logo"><img src="12-removebg-preview.png" alt="MEDSOL" class="logoo"> MEDSOL</a>
+    </header>
+
+
+    <section class="tt">
+
+  <h2 class="h2">Page de commande</h2>
+  <div class="tv">
+  <form onsubmit="return validateForm()" class="tx" action="MEDSOL.html">
+    <div class="fromcontol">
+    <label for="phone" class="label">Numéro de téléphone:</label><br>
+    <input type="text" id="phone" name="phone" pattern="[0-9]{10}"  class="input">
+    <br><br>
+</div>
+<div class="fromcontol">
+    <label for="email" class="label">Adresse e-mail:</label><br>
+    <input type="email" id="email" name="email"  class="input">
+    <br><br>
+</div>
+<div class="fromcontol">
+    <label for="address" class="label">Adresse:</label><br>
+    <input type="text" id="address" name="address"  class="input">
+    <br><br>
+</div>
+<div class="fromcontol">
+    <label for="dropdown" class="label">Liste déroulante:</label><br>
+    <select id="dropdown" name="dropdown" required class="input">
+      <option value=""></option>
+      <option value="option1">doctor</option>
+      <option value="option2">Drug</option>
+      <option value="option3">ambulance</option>
+      <option value="option3">blood donation</option>
+      <option value="option3">Sick care</option>
+      <option value="option3">Blood test</option>
+    </select>
+    <br><br>
+</div>
+    <input type="submit" value="Soumettre" class="btn">
+  </form>
+</div>
+</section>
+</body>
+</html>

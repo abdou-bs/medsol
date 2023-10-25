@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="2.png">
+    <title>MEDSOL - la solution est entre vos mains</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="12-removebg-preview.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <link rel="stylesheet" href="creationcompte.css">
+</head>
+<body>
+    <header class="header" >
+        <a href="MEDSOL.html#home" class="logo"><img src="12-removebg-preview.png" alt="MEDSOL" class="logoo"> MEDSOL</a>
+    </header>
+
+    <section class="tt">
+   
+        <h2 class="h2">create your account</h2><br>
+        <div class="tv">
+        <form class="tx" id="form" onsubmit="return validateForm()" action="MEDSOL.html">
+            <div class="fromcontol">
+                <label for="" class="label">username: </label><br>
+                <input type="text" id="username" placeholder="medsol" class="input">
+             
+            </div>
+            <div class="fromcontol">
+                <label for=""class="label">email: </label><br>
+                <input type="email" id="email" placeholder="medsol@gmail.com" class="input">
+              
+            </div>
+            <div class="fromcontol">
+                <label for=""class="label">password: </label><br>
+                <input type="password" id="password" placeholder="password" class="input">
+         
+            </div>
+            <div class="fromcontol">
+                <label for=""class="label">confirmation: </label><br>
+                <input type="password" id="password2" placeholder="password" class="input">
+           
+            </div>
+            <div class="fromcontol">
+            <label for="verificationCode" class="label">Code de vérification:</label>
+            <input type="text" id="verificationCode" name="verificationCode" readonly class="input"><br><br>
+            </div>
+            <button type="button" onclick="generateVerificationCode()" id="btnn">Générer un code</button><br><br>
+            <div class="fromcontol">
+            <label for="enteredVerificationCode" class="label">Entrez le code de vérification:</label>
+            <input type="text" id="enteredVerificationCode" name="enteredVerificationCode" class="input"><br><br>
+            </div>
+           <button type="submit" class="btn"> <a href="MEDSOL.html" class="a">register</a></button>
+        </form>
+    </div>
+    </section>
+
+    <script src="creationcompte.js"></script> 
+</body>
+</html>
